@@ -13,10 +13,10 @@ export default defineConfig({
   },
   root: path.resolve(__dirname, "client"),
   build: {
-    // La cartella di output per Netlify
-    outDir: path.resolve(__dirname, "dist"),
-    emptyOutDir: true,
+  outDir: path.resolve(__dirname, "client/dist"),
+  emptyOutDir: true,
   },
+    
   server: {
     fs: {
       strict: true,
