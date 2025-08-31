@@ -46,3 +46,4 @@ type Action =
     }
   | {
       type: ActionType["REMOVE_TOAST"]
+    }
