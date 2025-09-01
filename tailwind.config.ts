@@ -1,9 +1,25 @@
-import { defineConfig } from "tailwindcss";
+import type { Config } from "tailwindcss";
+import tailwindAnimate from "tailwindcss-animate";
 
-export default defineConfig({
-  content: ["./client/src/**/*.{js,ts,jsx,tsx}"],
+const config: Config = {
+  content: [
+    "./client/src/**/*.{js,ts,jsx,tsx}",
+    "./client/index.html"
+  ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        primary: "#4f46e5",
+        secondary: "#64748b",
+      },
+      fontFamily: {
+        sans: ["Inter", "ui-sans-serif", "system-ui"],
+      },
+    },
   },
-  plugins: [require("tailwindcss-animate")],
-});
+  plugins: [
+    tailwindAnimate,
+  ],
+};
+
+export default config;
