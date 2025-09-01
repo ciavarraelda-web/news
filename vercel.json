@@ -2,21 +2,33 @@
   "version": 3,
   "builds": [
     {
-      "src": "package.json",
-      "use": "@vercel/node"
+      "src": "client/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist/client"
+      }
     },
     {
-      "src": "dist/client/**/*",
-      "use": "@vercel/static-build"
+      "src": "server/index.ts",
+      "use": "@vercel/node",
+      "config": {
+        "runtime": "nodejs20.x"
+      }
     }
   ],
   "routes": [
     {
+      "src": "/api/(.*)",
+      "dest": "/server/index.ts"
+    },
+    {
       "src": "/(.*)",
-      "dest": "/dist/server/index.js"
+      "dest": "/dist/client/$1"
     }
   ],
   "env": {
-    "NODE_ENV": "production"
+    "NODE_ENV": "production",
+    "DATABASE_URL": "@your-database-url",
+    "SESSION_SECRET": "@your-session-secret"
   }
 }
