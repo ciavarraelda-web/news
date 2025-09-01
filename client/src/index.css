@@ -2,7 +2,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+@import "tailwindcss-animate";
 :root {
   --background: hsl(0 0% 4%);
   --foreground: hsl(0 0% 98%);
