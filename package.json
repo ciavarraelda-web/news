@@ -48,7 +48,8 @@
     "react-icons": "^4.11.0",
     "react-hook-form": "^7.51.0",
     "tailwind-merge": "^1.14.0",
-    "class-variance-authority": "^0.7.0"
+    "class-variance-authority": "^0.7.0",
+    "@hookform/resolvers": "^3.9.0"
   },
   "devDependencies": {
     "@types/node": "20.16.11",
