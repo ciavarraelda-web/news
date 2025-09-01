@@ -6,16 +6,22 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      "@": path.resolve("./client/src"),
-      "@assets": path.resolve("./client/attached_assets")
-    },
+      "@": path.resolve(__dirname, "client/src"),
+      "@assets": path.resolve(__dirname, "client/attached_assets"),
+      "@shared": path.resolve(__dirname, "shared")
+    }
   },
-  root: path.resolve("./client"),
+  root: path.resolve(__dirname, "client"),
   build: {
-    outDir: path.resolve("./dist/public"),
+    outDir: path.resolve(__dirname, "dist/public"),
     emptyOutDir: true,
     rollupOptions: {
-      external: ["lucide-react"] // se vuoi esternalizzare lucide
+      external: ["lucide-react"] // se vuoi trattare alcuni moduli come esterni
+    }
+  },
+  server: {
+    fs: {
+      strict: true
     }
   }
 });
