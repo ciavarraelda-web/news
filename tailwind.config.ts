@@ -1,71 +1,49 @@
-import type { Config } from "tailwindcss"
+import type { Config } from "tailwindcss";
 
 const config: Config = {
-  darkMode: ["class"], // supporta dark mode con .dark
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ["./client/src/**/*.{ts,tsx,js,jsx}"],
   theme: {
     extend: {
       colors: {
-        background: "hsl(var(--background) / <alpha-value>)",
-        foreground: "hsl(var(--foreground) / <alpha-value>)",
-        card: "hsl(var(--card) / <alpha-value>)",
-        "card-foreground": "hsl(var(--card-foreground) / <alpha-value>)",
-        popover: "hsl(var(--popover) / <alpha-value>)",
-        "popover-foreground": "hsl(var(--popover-foreground) / <alpha-value>)",
-        primary: "hsl(var(--primary) / <alpha-value>)",
-        "primary-foreground": "hsl(var(--primary-foreground) / <alpha-value>)",
-        secondary: "hsl(var(--secondary) / <alpha-value>)",
-        "secondary-foreground": "hsl(var(--secondary-foreground) / <alpha-value>)",
-        muted: "hsl(var(--muted) / <alpha-value>)",
-        "muted-foreground": "hsl(var(--muted-foreground) / <alpha-value>)",
-        accent: "hsl(var(--accent) / <alpha-value>)",
-        "accent-foreground": "hsl(var(--accent-foreground) / <alpha-value>)",
-        destructive: "hsl(var(--destructive) / <alpha-value>)",
-        "destructive-foreground": "hsl(var(--destructive-foreground) / <alpha-value>)",
-        border: "hsl(var(--border) / <alpha-value>)",
-        input: "hsl(var(--input) / <alpha-value>)",
-        ring: "hsl(var(--ring) / <alpha-value>)",
-        sidebar: "hsl(var(--sidebar) / <alpha-value>)",
-        "sidebar-foreground": "hsl(var(--sidebar-foreground) / <alpha-value>)",
-        "sidebar-primary": "hsl(var(--sidebar-primary) / <alpha-value>)",
-        "sidebar-primary-foreground": "hsl(var(--sidebar-primary-foreground) / <alpha-value>)",
-        "sidebar-accent": "hsl(var(--sidebar-accent) / <alpha-value>)",
-        "sidebar-accent-foreground": "hsl(var(--sidebar-accent-foreground) / <alpha-value>)",
-        "sidebar-border": "hsl(var(--sidebar-border) / <alpha-value>)",
-        "sidebar-ring": "hsl(var(--sidebar-ring) / <alpha-value>)",
+        background: "var(--background)",
+        foreground: "var(--foreground)",
+        card: "var(--card)",
+        "card-foreground": "var(--card-foreground)",
+        popover: "var(--popover)",
+        "popover-foreground": "var(--popover-foreground)",
+        primary: "var(--primary)",
+        "primary-foreground": "var(--primary-foreground)",
+        secondary: "var(--secondary)",
+        "secondary-foreground": "var(--secondary-foreground)",
+        muted: "var(--muted)",
+        "muted-foreground": "var(--muted-foreground)",
+        accent: "var(--accent)",
+        "accent-foreground": "var(--accent-foreground)",
+        destructive: "var(--destructive)",
+        "destructive-foreground": "var(--destructive-foreground)",
+        border: "var(--border)",
+        input: "var(--input)",
+        ring: "var(--ring)",
+        sidebar: "var(--sidebar)",
+        "sidebar-foreground": "var(--sidebar-foreground)",
+        "sidebar-primary": "var(--sidebar-primary)",
+        "sidebar-primary-foreground": "var(--sidebar-primary-foreground)",
+        "sidebar-accent": "var(--sidebar-accent)",
+        "sidebar-accent-foreground": "var(--sidebar-accent-foreground)",
+        "sidebar-border": "var(--sidebar-border)",
+        "sidebar-ring": "var(--sidebar-ring)",
       },
       fontFamily: {
-        sans: ["var(--font-sans)", "sans-serif"],
-        serif: ["var(--font-serif)", "serif"],
-        mono: ["var(--font-mono)", "monospace"],
+        sans: "var(--font-sans)",
+        serif: "var(--font-serif)",
+        mono: "var(--font-mono)",
       },
       borderRadius: {
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
-      },
-      keyframes: {
-        "accordion-down": {
-          from: { height: "0" },
-          to: { height: "var(--radix-accordion-content-height)" },
-        },
-        "accordion-up": {
-          from: { height: "var(--radix-accordion-content-height)" },
-          to: { height: "0" },
-        },
-      },
-      animation: {
-        "accordion-down": "accordion-down 0.2s ease-out",
-        "accordion-up": "accordion-up 0.2s ease-out",
+        DEFAULT: "var(--radius)",
       },
     },
   },
-  plugins: [
-    require("tailwindcss-animate"),
-  ],
-}
+  plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
+};
 
-export default config
+export default config;
