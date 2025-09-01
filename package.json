@@ -47,7 +47,8 @@
     "zod-validation-error": "^3.4.0",
     "react-icons": "^4.11.0",
     "react-hook-form": "^7.51.0",
-    "tailwind-merge": "^1.14.0"
+    "tailwind-merge": "^1.14.0",
+    "class-variance-authority": "^0.7.0"
   },
   "devDependencies": {
     "@types/node": "20.16.11",
