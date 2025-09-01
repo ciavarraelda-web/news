@@ -7,7 +7,7 @@
     "node": ">=20"
   },
   "scripts": {
-    "dev": "NODE_ENV=development tsx server/index.ts",
+    "dev": "tsx server/index.ts",
     "build": "vite build && esbuild server/index.ts --platform=node --bundle --format=esm --outdir=dist",
     "start": "NODE_ENV=production node dist/index.js",
     "check": "tsc",
@@ -23,9 +23,11 @@
     "@radix-ui/react-dialog": "^1.1.7",
     "@radix-ui/react-tooltip": "^1.2.0",
     "@radix-ui/react-popover": "^1.1.7",
-    "@radix-ui/react-tabs": "^1.0.6",
+    "@radix-ui/react-tabs": "^1.2.0",
     "clsx": "^2.1.1",
     "framer-motion": "^11.13.1",
+    "react-hook-form": "^7.51.0",
+    "react-icons": "^4.10.1",
     "express": "^4.21.2",
     "express-session": "^1.18.1",
     "memorystore": "^1.6.7",
@@ -46,8 +48,7 @@
     "zod": "^3.24.2",
     "zod-validation-error": "^3.4.0",
     "tailwind-merge": "^1.14.0",
-    "class-variance-authority": "^0.5.3",
-    "react-icons": "^4.11.0"
+    "class-variance-authority": "^0.7.1"
   },
   "devDependencies": {
     "@types/node": "20.16.11",
