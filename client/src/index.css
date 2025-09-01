@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import "tailwindcss-animate";
 
 :root {
   --background: hsl(0 0% 4%);
@@ -24,22 +24,6 @@
   --border: hsl(0 0% 18%);
   --input: hsl(0 0% 18%);
   --ring: hsl(28 100% 53%);
-  --chart-1: hsl(28 100% 53%);
-  --chart-2: hsl(192 100% 50%);
-  --chart-3: hsl(142 76% 36%);
-  --chart-4: hsl(0 84% 60%);
-  --chart-5: hsl(264 69% 55%);
-  --sidebar: hsl(0 0% 10%);
-  --sidebar-foreground: hsl(0 0% 98%);
-  --sidebar-primary: hsl(28 100% 53%);
-  --sidebar-primary-foreground: hsl(0 0% 9%);
-  --sidebar-accent: hsl(0 0% 15%);
-  --sidebar-accent-foreground: hsl(0 0% 98%);
-  --sidebar-border: hsl(0 0% 18%);
-  --sidebar-ring: hsl(28 100% 53%);
-  --font-sans: 'Inter', sans-serif;
-  --font-serif: Georgia, serif;
-  --font-mono: 'JetBrains Mono', monospace;
   --radius: 0.5rem;
 }
 
@@ -67,7 +51,7 @@
 
 @layer base {
   * {
-    @apply border-border; /* meglio usare la variabile tailwind */
+    @apply border border-gray-800;
   }
 
   body {
@@ -82,20 +66,20 @@
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
-  
+
   .crypto-glow {
     box-shadow: 0 0 20px hsla(28 100% 53% / 0.3);
   }
-  
+
   .news-card {
     transition: all 0.3s ease;
   }
-  
+
   .news-card:hover {
     transform: translateY(-4px);
     box-shadow: 0 12px 24px hsla(0 0% 0% / 0.4);
   }
-  
+
   .sponsored-banner {
     background: linear-gradient(135deg, hsla(28 100% 53% / 0.1), hsla(192 100% 50% / 0.1));
     border: 1px solid hsla(28 100% 53% / 0.3);
