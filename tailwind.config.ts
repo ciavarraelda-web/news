@@ -1,11 +1,15 @@
 import type { Config } from "tailwindcss";
 
-const config: Config = {
-  content: ["./client/src/**/*.{js,ts,jsx,tsx}"],
+export default {
+  content: [
+    "./client/src/**/*.{js,ts,jsx,tsx}",
+    "./client/index.html"
+  ],
   theme: {
-    extend: {},
+    extend: {}
   },
-  plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
-};
-
-export default config;
+  plugins: [
+    require("@tailwindcss/typography"),
+    require("tailwindcss-animate")
+  ]
+} satisfies Config;
