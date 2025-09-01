@@ -6,17 +6,14 @@
       "use": "@vercel/node"
     },
     {
-      "src": "client/**/*",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "dist/client"
-      }
+      "src": "dist/client/**/*",
+      "use": "@vercel/static-build"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "/server/index.js"
+      "dest": "/dist/server/index.js"
     }
   ],
   "env": {
